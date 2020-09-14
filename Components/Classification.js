@@ -69,7 +69,7 @@ class Classification extends React.Component {
     renderPrediction = prediction => {
         return (
             <Text key={prediction.className} style={styles.text}>
-            {prediction.className}
+            {prediction.className} {prediction.probability}
             </Text>
         )
     }
@@ -80,8 +80,6 @@ class Classification extends React.Component {
         return (
         <View>
         {/* <Text style={styles.modalText}>{image.uri}</Text> */}
-            <StatusBar barStyle='light-content' />
-
             <View style={styles.loadingContainer}>
                 <Text style={styles.text}>
                     TFJS ready? {isTfReady ? <Text>✅</Text> : ''}
@@ -96,7 +94,6 @@ class Classification extends React.Component {
                     )}
                 </View>
             </View>
-
             <View style={styles.predictionWrapper}>
                 {isModelReady && image.uri &&  (
                     <Text style={styles.text}>
@@ -126,7 +123,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     loadingContainer: {
-        marginTop: 80,
+        marginTop: 5,
         justifyContent: 'center'
     },
     text: {
@@ -135,7 +132,7 @@ const styles = StyleSheet.create({
     },
     loadingModelContainer: {
         flexDirection: 'row',
-        marginTop: 10
+        marginTop: 5
     },
     imageWrapper: {
         width: 280,

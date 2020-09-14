@@ -51,7 +51,7 @@ export default function App() {
                     }}
                     >
                     <View style={{ flexDirection: 'row', flex: 4 }}>
-                        <Icon name="logo-snapchat" style={{ color: 'white' }} />
+                        <Icon name="ios-leaf" style={{ color: 'white' }} />
                         <Item style={{ backgroundColor: 'transparent' }}>
                             <Icon name="ios-search" style={{ color: 'white', fontSize: 24, fontWeight: 'bold' }}></Icon>
                             <Input
@@ -108,7 +108,6 @@ export default function App() {
                             if(cameraRef){
                             let photo = await cameraRef.takePictureAsync();
                             cameraRef.pausePreview()
-                            setTimeout(function(){ console.log("Hello"); }, 3000);
                             setCapturedImage(photo)
                             setModalVisible(!isModalVisible);
                             cameraRef.resumePreview()
@@ -130,9 +129,6 @@ export default function App() {
     );
 
   }
-  
-
-  
 
 const styles = StyleSheet.create({
     // container: {
