@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "PlantSnap",
+    "description" : "Your plants also need a snapchat",
     "slug": "PlantSnap",
     "version": "1.0.0",
     "orientation": "portrait",
